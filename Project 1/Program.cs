@@ -1,4 +1,4 @@
-﻿// Just a program
+// Just a program
 
 //internal class program
 //{
@@ -54,8 +54,6 @@
 //Web scraper
 
 using HtmlAgilityPack;
-using System;
-using System.Net.Http;
 
 namespace WebScraper
 {
