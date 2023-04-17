@@ -1,4 +1,4 @@
-// Just a program
+﻿// Just a program
 
 //internal class program
 //{
@@ -55,7 +55,8 @@
 
 using HtmlAgilityPack;
 
-namespace WebScraper
+
+namespace WebScrapers
 {
 
     class Program
@@ -64,7 +65,7 @@ namespace WebScraper
         static void Main(string[] args)
         {
             // Send get request to weather.com
-            String url = "https://weather.com/en-TZ/weather/today/l/e3098160bc6bf690b70244caadff6145e27802d46872aab77148bb873c0cb43b";
+            string url = "https://weather.com/en-TZ/weather/today/l/b7d1e1023d5e6e48ed2c66899d60072bde6b0ae320e209995c6c58324047d66c1dfe89ff36c55f147bc93bd74b9c90fc";
             var httpClient = new HttpClient();
             var html = httpClient.GetStringAsync(url).Result;
             var htmlDocument = new HtmlDocument();
@@ -73,7 +74,7 @@ namespace WebScraper
             // Get the Date & time
             DateTime now = DateTime.Now;
             
-
+            
             // Get the location
             var locationElement = htmlDocument.DocumentNode.SelectSingleNode("//h1[@class='CurrentConditions--location--1YWj_']");
             var location = locationElement.InnerText.Trim();
